@@ -53,4 +53,23 @@ object Functions2 extends App {
 
   println(factorial(5))
   println(factorial(0))
+
+  def fibonacciOf(n: Int): Int = {
+    if (n <= 2 ) 1 // Base case
+    else fibonacciOf(n-1) + fibonacciOf(n-2)
+  }
+
+  println(fibonacciOf(5))
+
+  def isPrime(n: Int): Boolean = {
+    def isPrimeUntil(t: Int): Boolean =
+      if (t <= 1) true
+      else n % t != 0 && isPrimeUntil(t - 1)
+    isPrimeUntil(n / 2)
+  }
+
+  println(isPrime(37))
+  println(isPrime(2003))
+  println(isPrime(42))
+  println(isPrime(37 * 17))
 }
