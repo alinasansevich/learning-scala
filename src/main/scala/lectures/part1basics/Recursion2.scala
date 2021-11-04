@@ -78,14 +78,14 @@ object Recursion2 extends App {
   println(concatenateTailrec("hello ", 3, "")) // His answer, doesn't use an auxilliary function
 
   // ----------------------------------------------------
-  def isPrime(n: Int): Boolean = {
+  def isPrime2(n: Int): Boolean = {
     def isPrimeUntil(t: Int): Boolean =
       if (t <= 1) true
       else n % t != 0 && isPrimeUntil(t - 1)
     isPrimeUntil(n / 2)
   }
 
-  println(isPrime(37))
+  println(isPrime2(37))
 
 
   def isPrime(n: Int): Boolean = {
@@ -123,18 +123,3 @@ object Recursion2 extends App {
   println(fibonacci(8)) // 1 1 2 3 5 8 13, 21
 
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
